@@ -1,0 +1,76 @@
+{
+  "name": "dsh-nvrun",
+  "version": "1.0.0",
+  "description": "Linux-only NVIDIA CUDA runner for the DeepSeek Harness local sandbox.",
+  "license": "MIT",
+  "type": "module",
+  "os": [
+    "linux"
+  ],
+  "engines": {
+    "node": ">=24.9.0",
+    "dsh": ">=0.2.2-alpha.2 <0.3.0"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "cuda",
+    "nvidia",
+    "sandbox",
+    "linux",
+    "wsl2",
+    "gpu",
+    "runner",
+    "nvrun"
+  ],
+  "exports": {
+    ".": "./runner.js",
+    "./runner": "./runner.js",
+    "./runner.js": "./runner.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "runner.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "optionalDependencies": {
+    "@deepseek-ai/node-addon-system": "0.1.2"
+  },
+  "scripts": {
+    "format": "biome format --write runner.js test package.json jsconfig.json biome.json",
+    "lint": "biome lint runner.js test",
+    "typecheck": "tsc -p jsconfig.json",
+    "test": "node --test",
+    "check": "biome check runner.js test package.json jsconfig.json biome.json && pnpm typecheck && node --test",
+    "check:fix": "biome check --write runner.js test package.json jsconfig.json biome.json && pnpm typecheck && node --test"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.4",
+    "@types/node": "24.19.2",
+    "typescript": "6.0.3"
+  },
+  "author": {
+    "name": "Traxton",
+    "url": "https://github.com/notxart"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notxart/dsh-nvrun.git"
+  },
+  "bugs": {
+    "url": "https://github.com/notxart/dsh-nvrun/issues"
+  },
+  "homepage": "https://github.com/notxart/dsh-nvrun#readme"
+}

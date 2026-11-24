@@ -1,0 +1,9 @@
+# The sandbox provider owns policy and lifecycle. This bundle supplies only the
+# bwrap-compatible runner seam and never disables the provider.
+- id: sandbox
+  config:
+    runnerCommand:
+      - !!js process.execPath
+      - !!js ctx.profileContext.dir + '/node_modules/dsh-nvrun/runner.js'
+    runnerFailureSignatures:
+      - 'dsh-gpu-runner:'

@@ -1,0 +1,11 @@
+node_modules/
+*.log
+.DS_Store
+.tools/
+coverage/
+*.tgz
+dist/
+
+.venv/
+.uv-cache/
+.jax-cache/
