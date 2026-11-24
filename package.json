@@ -1,6 +1,6 @@
 {
   "name": "dsh-nvrun",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Linux-only NVIDIA CUDA runner for the DeepSeek Harness local sandbox.",
   "license": "MIT",
   "type": "module",
