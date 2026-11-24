@@ -45,11 +45,11 @@ This is the failure tracked in
 Paste this prompt into a DSH agent:
 
 ```text
-Install the DeepSeek Harness bundle dsh-nvrun@1.0.0.
+Install the DeepSeek Harness bundle dsh-nvrun@1.0.1.
 
 Hard constraints:
 1. Use only the plugin_manager tool with action "install_bundle" and
-   target "dsh-nvrun@1.0.0". This exact npm package and version is
+   target "dsh-nvrun@1.0.1". This exact npm package and version is
    the only allowed install source.
 2. Do not clone a repository, download a tarball, install from a local path,
    edit package.json or cordis.patch.yml, or install any other package.
@@ -77,7 +77,7 @@ From a DSH session:
 ```json
 {
   "action": "install_bundle",
-  "target": "dsh-nvrun@1.0.0"
+  "target": "dsh-nvrun@1.0.1"
 }
 ```
 
