@@ -35,5 +35,5 @@ jobs:
       - run: pnpm check
       - run: pnpm pack --pack-destination dist
 
-      - name: Publish
-        run: npm publish ./dist/dsh-nvrun-*.tgz --access public --provenance
+      - name: Stage package
+        run: npm stage publish ./dist/dsh-nvrun-*.tgz --access public --provenance
