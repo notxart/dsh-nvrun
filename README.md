@@ -40,6 +40,8 @@ This is the failure tracked in
     optional dependency and the runner also checks `~/.local/bin`. The optional
     native payload is small and may duplicate a copy already shipped by DSH.
 
+<!-- x-release-please-start-version -->
+
 ## Install with an agent
 
 Paste this prompt into a DSH agent:
@@ -83,6 +85,8 @@ From a DSH session:
 
 A successful result contains `"application": "applied"`. If the result says
 `"restart-required"`, restart DSH before testing.
+
+<!-- x-release-please-end -->
 
 ## Runner selection
 
